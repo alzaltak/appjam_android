@@ -9,8 +9,8 @@ import androidx.compose.ui.tooling.preview.Preview
 private const val JoinDefaultInfoScreen: Int = 0
 private const val JoinAddressScreen: Int = 1
 private const val JoinNumberScreen: Int = 2
-private const val JoinPhotoScreen: Int = 3
-private const val JoinCultureScreen: Int = 4
+private const val JoinDateScreen: Int = 3
+private const val JoinPhotoScreen: Int = 4
 
 @Composable
 fun JoinScreen(
@@ -45,7 +45,7 @@ fun JoinScreen(
                     pageState.value++
                 },
             )
-            JoinPhotoScreen -> JoinPhotoScreen(
+            JoinDateScreen -> JoinDateScreen(
                 onPrevious = {
                     pageState.value--
                 },
@@ -53,7 +53,7 @@ fun JoinScreen(
                     pageState.value++
                 },
             )
-            JoinCultureScreen -> JoinCultureScreen(
+            JoinPhotoScreen -> JoinPhotoScreen(
                 onPrevious = {
                     pageState.value--
                 },
