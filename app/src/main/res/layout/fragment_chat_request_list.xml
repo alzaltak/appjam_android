@@ -43,23 +43,22 @@
                     android:id="@+id/img_chat_request_item"
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
-                    android:layout_marginBottom="16dp"
-                    android:src="@drawable/item_chat_request" />
+                    android:src="@drawable/img_chat_request_1" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
-                    android:src="@drawable/item_chat_request" />
+                    android:src="@drawable/img_chat_request_2" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
-                    android:src="@drawable/item_chat_request" />
+                    android:src="@drawable/img_chat_request_3" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="300dp"
-                    android:src="@drawable/item_chat_request" />
+                    android:src="@drawable/img_chat_request_4" />
             </LinearLayout>
         </ScrollView>
 

@@ -9,7 +9,7 @@ import com.aljaldak.culmix.databinding.FragmentChatRequestListBinding
 
 class ChatRequestListFragment : Fragment() {
 
-    private lateinit var binding : FragmentChatRequestListBinding
+    private lateinit var binding: FragmentChatRequestListBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,5 +22,12 @@ class ChatRequestListFragment : Fragment() {
             false,
         )
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.imgChatRequestItem.setOnClickListener {
+            it.visibility = View.GONE
+        }
     }
 }
