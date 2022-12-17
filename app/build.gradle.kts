@@ -8,7 +8,6 @@ plugins {
 
 android {
     namespace = "com.aljaldak.culmix"
-
     compileSdk = ProjectProperties.COMPILE_SDK_VERSION
 
     defaultConfig {
