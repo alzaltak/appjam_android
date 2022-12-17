@@ -13,7 +13,7 @@ private const val JoinNumberScreen: Int = 2
 private const val JoinDateScreen: Int = 3
 private const val JoinPhotoScreen: Int = 4
 private const val JoinCultureScreen: Int = 5
-private const val JoinProvideScreen: Int= 6
+private const val JoinProvideScreen: Int = 6
 private const val JoinRecommendScreen: Int = 7
 private const val JoinTitleScreen: Int = 8
 
@@ -26,8 +26,7 @@ fun JoinScreen(
     val pageState = remember { mutableStateOf(0) }
 
     Crossfade(
-        modifier = modifier,
-        targetState = pageState.value
+        modifier = modifier, targetState = pageState.value
     ) { page ->
         when (page) {
             JoinDefaultInfoScreen -> JoinDefaultInfoScreen(

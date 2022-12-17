@@ -12,7 +12,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.ViewModel
 import com.aljaldak.culmix.core.component.BackBar
 import com.aljaldak.culmix.core.component.CulmixLargeButton
 import com.aljaldak.culmix.core.component.StepsProgressBar
@@ -20,7 +19,7 @@ import com.aljaldak.culmix.core.theme.Main
 import com.aljaldak.culmix.core.theme.notoSansFamily
 
 @Composable
-fun Register1Screen(onClick: () -> Unit, viewModel: ViewModel) {
+fun Register1Screen(onClick: () -> Unit, viewModel: RegisterViewModel) {
 
     val firstName = remember { mutableStateOf("") }
     val lastName = remember { mutableStateOf("") }
@@ -53,7 +52,10 @@ fun Register1Screen(onClick: () -> Unit, viewModel: ViewModel) {
                     modifier = Modifier
                         .width(80.dp),
                     value = firstName.value,
-                    onValueChange = { firstName.value = it },
+                    onValueChange = {
+                        firstName.value = it
+                        viewModel.first_name = it
+                    },
                     colors = TextFieldDefaults.outlinedTextFieldColors(
                         backgroundColor = Color(0xFFFFFFFF),
                         focusedBorderColor = Main
@@ -67,7 +69,10 @@ fun Register1Screen(onClick: () -> Unit, viewModel: ViewModel) {
                         .padding(start = 12.dp)
                         .width(188.dp),
                     value = lastName.value,
-                    onValueChange = { lastName.value = it },
+                    onValueChange = {
+                        lastName.value = it
+                        viewModel.last_name = it
+                    },
                     colors = TextFieldDefaults.outlinedTextFieldColors(
                         backgroundColor = Color(0xFFFFFFFF),
                         focusedBorderColor = Main
@@ -81,7 +86,10 @@ fun Register1Screen(onClick: () -> Unit, viewModel: ViewModel) {
                 modifier = Modifier
                     .fillMaxWidth(),
                 value = email.value,
-                onValueChange = { email.value = it },
+                onValueChange = {
+                    email.value = it
+                    viewModel.email = it
+                },
                 colors = TextFieldDefaults.outlinedTextFieldColors(
                     backgroundColor = Color(0xFFFFFFFF),
                     focusedBorderColor = Main

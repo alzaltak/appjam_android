@@ -5,6 +5,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.POST
 
+val serverAPIProvider: ServerAPI = RetrofitClient.build().create(ServerAPI::class.java)
+
 interface ServerAPI {
 
     @POST("/user/signup")
@@ -37,8 +39,8 @@ object RetrofitClient {
     private var retrofit: Retrofit? = null
 
     fun build(): Retrofit {
-        return retrofit ?: Retrofit.Builder()
-            .addConverterFactory(GsonConverterFactory())..build()
+        return retrofit ?: Retrofit.Builder().addConverterFactory(GsonConverterFactory.create())
+            .baseUrl(BASE_URL).build()
     }
 }
 
