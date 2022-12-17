@@ -3,6 +3,7 @@ package com.aljaldak.culmix.data
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.http.Body
 import retrofit2.http.POST
 
 val serverAPIProvider: ServerAPI = RetrofitClient.build().create(ServerAPI::class.java)
@@ -11,12 +12,12 @@ interface ServerAPI {
 
     @POST("/user/signup")
     suspend fun register(
-        registerRequest: RegisterRequest,
+        @Body registerRequest: RegisterRequest,
     ): Response<Void>
 
     @POST("/login/token")
     suspend fun login(
-        loginRequest: LoginRequsest,
+        @Body loginRequest: LoginRequsest,
     ): Response<Void>
 }
 

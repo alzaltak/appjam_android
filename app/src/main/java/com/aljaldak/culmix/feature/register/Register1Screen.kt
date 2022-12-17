@@ -54,7 +54,9 @@ fun Register1Screen(onClick: () -> Unit, viewModel: RegisterViewModel) {
                     value = firstName.value,
                     onValueChange = {
                         firstName.value = it
-                        viewModel.first_name = it
+                        viewModel.first_name = it.also {
+                            println("HHHHHHH $it")
+                        }
                     },
                     colors = TextFieldDefaults.outlinedTextFieldColors(
                         backgroundColor = Color(0xFFFFFFFF),
@@ -71,7 +73,9 @@ fun Register1Screen(onClick: () -> Unit, viewModel: RegisterViewModel) {
                     value = lastName.value,
                     onValueChange = {
                         lastName.value = it
-                        viewModel.last_name = it
+                        viewModel.last_name = it.also {
+                            println("HHHHHHH $it")
+                        }
                     },
                     colors = TextFieldDefaults.outlinedTextFieldColors(
                         backgroundColor = Color(0xFFFFFFFF),
@@ -88,7 +92,9 @@ fun Register1Screen(onClick: () -> Unit, viewModel: RegisterViewModel) {
                 value = email.value,
                 onValueChange = {
                     email.value = it
-                    viewModel.email = it
+                    viewModel.email = it.also {
+                        println("HHHHHHH $it")
+                    }
                 },
                 colors = TextFieldDefaults.outlinedTextFieldColors(
                     backgroundColor = Color(0xFFFFFFFF),

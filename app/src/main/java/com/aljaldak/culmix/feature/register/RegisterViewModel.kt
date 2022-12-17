@@ -43,7 +43,9 @@ class RegisterViewModel @Inject constructor(
                         first_name = first_name!!,
                         my_lang = my_lang!!,
                         email = email!!,
-                    )
+                    ).also {
+                        println(it)
+                    }
                 )
             }.onSuccess {
                 if (it.isSuccessful) {

@@ -40,7 +40,6 @@ class RegisterActivity : ComponentActivity() {
                 3 -> {
                     Register3Screen(onClick = {
                         viewModel.increasePageState()
-                        viewModel.register()
                     }, viewModel)
                 }
                 4 -> {
@@ -51,6 +50,7 @@ class RegisterActivity : ComponentActivity() {
                 5 -> {
                     Register5Screen(onClick = {
                         viewModel.increasePageState()
+                        viewModel.register()
                     }, viewModel = viewModel)
                 }
                 else -> {
