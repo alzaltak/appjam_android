@@ -19,7 +19,10 @@ fun BackBar(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(vertical = 16.dp),
+            .padding(
+                vertical = 16.dp,
+                horizontal = 30.dp,
+            ),
     ) {
         Icon(
             modifier = Modifier.simClickable {
