@@ -32,7 +32,7 @@ fun Register1Screen(onClick: () -> Unit, viewModel: ViewModel) {
                 .padding(start = 30.dp, end = 30.dp)
         ) {
             BackBar {
-
+                viewModel
             }
             StepsProgressBar(
                 numberOfSteps = 5,

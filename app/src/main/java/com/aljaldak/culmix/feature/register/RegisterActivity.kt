@@ -6,27 +6,34 @@ import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.ui.platform.LocalContext
-import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.hilt.navigation.compose.hiltViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-class RegisterActivity : ComponentActivity() {
+@AndroidEntryPoint
+class RegisterActivity: ComponentActivity() {
 
     private val viewModel by viewModels<RegisterViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            val pageState = remember {
-                mutableStateOf(1)
+            val pageState = remember { mutableStateOf(1) }
+            viewModel.pageState.observe(this) {
+                pageState.value = it
             }
             when (pageState.value) {
                 1 -> {
-                    Register1Screen(onClick = {
-                        pageState.value++
-                    }, viewModel = viewModel(LocalContext.current as RegisterActivity))
+                    Register1Screen(
+                        onClick = {
+                            viewModel.increasePageState()
+                        },
+                        viewModel = viewModel,
+                    )
                 }
                 2 -> {
-                    Register2Screen()
+                    Register2Screen(onClick = {
+                        viewModel.increasePageState()
+                    })
                 }
                 3 -> {
                     Register3Screen()

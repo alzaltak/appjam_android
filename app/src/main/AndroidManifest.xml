@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".root.CulmixApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -12,15 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Culmix"
         tools:targetApi="31">
-        <activity
-            android:name=".Register2Activity"
-            android:exported="false"
-            android:label="@string/title_activity_register2"
-            android:theme="@style/Theme.Culmix">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
         <activity
             android:name=".feature.start.activity.StartActivity"
             android:exported="false" />
