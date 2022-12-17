@@ -79,6 +79,7 @@ dependencies {
     implementation(Dependency.Mvi.ORBIT_VIEWMODEL)
     implementation(Dependency.Mvi.ORBIT_CORE)
     implementation("com.google.accompanist:accompanist-flowlayout:0.25.0")
+    implementation("team.duckie.quack:quack-ui-components:1.3.8")
 
     androidTestImplementation(Dependency.Compose.COMPOSE_TEST)
     debugImplementation(Dependency.Compose.COMPOSE_UI_TOOL)
