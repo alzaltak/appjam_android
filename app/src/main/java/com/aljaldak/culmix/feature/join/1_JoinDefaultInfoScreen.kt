@@ -24,12 +24,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.aljaldak.culmix.R
+import com.aljaldak.culmix.core.component.CulmixLargeButton
 import com.aljaldak.culmix.core.component.CulmixTextField
 import com.aljaldak.culmix.core.theme.Body1
 import com.aljaldak.culmix.core.theme.Title1
 import com.aljaldak.culmix.core.util.simClickable
 import com.aljaldak.culmix.feature.join.common.JoinDivider
+import com.aljaldak.culmix.feature.join.common.JoinSimpleLayout
 import com.aljaldak.culmix.feature.join.common.RadioButton
+import com.aljaldak.culmix.feature.join.common.UpDownContent
 
 private val HouseTypeList = listOf(
     "아파트",
@@ -46,101 +49,81 @@ fun JoinDefaultInfoScreen(
     var roomNumber by remember { mutableStateOf(0) }
     var houseSize by remember { mutableStateOf("") }
 
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(horizontal = 30.dp),
-    ) {
-        BackBar {
-            onPrevious()
-        }
-
-        Spacer(modifier = Modifier.height(30.dp))
-
-        Title1(text = "집 정보 입력")
-
-        Spacer(modifier = Modifier.height(21.dp))
-
-        Body1(text = "어떤 집 유형인가요?")
-
-        Spacer(modifier = Modifier.height(18.dp))
-
-        LazyRow(
-            horizontalArrangement = Arrangement.spacedBy(15.dp)
-        ) {
-            itemsIndexed(HouseTypeList) { index, house ->
-                RadioButton(
-                    text = house,
-                    onClick = {
-                        selectedTypeBtn = index
-                    },
-                    enabled = selectedTypeBtn == index,
-                )
+    JoinSimpleLayout(
+        topContent = {
+            BackBar {
+                onPrevious()
             }
-        }
+        },
+        content = {
+            Spacer(modifier = Modifier.height(30.dp))
 
-        Spacer(modifier = Modifier.height(24.dp))
+            Title1(text = "집 정보 입력")
 
-        JoinDivider()
+            Spacer(modifier = Modifier.height(21.dp))
 
-        Spacer(modifier = Modifier.height(24.dp))
+            Body1(text = "어떤 집 유형인가요?")
 
-        Body1(text = "집에 방이 몇 개 있나요?")
+            Spacer(modifier = Modifier.height(18.dp))
 
-        Spacer(modifier = Modifier.height(14.dp))
+            LazyRow(
+                horizontalArrangement = Arrangement.spacedBy(15.dp)
+            ) {
+                itemsIndexed(HouseTypeList) { index, house ->
+                    RadioButton(
+                        text = house,
+                        onClick = {
+                            selectedTypeBtn = index
+                        },
+                        enabled = selectedTypeBtn == index,
+                    )
+                }
+            }
 
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.Center,
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            Image(
-                painter = painterResource(id = R.drawable.ic_minus),
-                contentDescription = null,
-                modifier = Modifier
-                    .simClickable(
-                        runIf = roomNumber > 0
-                    ) {
-                        roomNumber--
-                    },
+            Spacer(modifier = Modifier.height(24.dp))
+
+            JoinDivider()
+
+            Spacer(modifier = Modifier.height(24.dp))
+
+            Body1(text = "집에 방이 몇 개 있나요?")
+
+            Spacer(modifier = Modifier.height(14.dp))
+
+            UpDownContent(
+                number = roomNumber,
+                onClickUp = { roomNumber++ },
+                onClickDown = { roomNumber-- }
             )
-
             Spacer(modifier = Modifier.width(24.dp))
 
-            Body1(text = "${roomNumber}개")
+            Spacer(modifier = Modifier.height(24.dp))
 
-            Spacer(modifier = Modifier.width(24.dp))
+            JoinDivider()
 
-            Image(
-                painter = painterResource(id = R.drawable.ic_minus),
-                contentDescription = null,
-                modifier = Modifier
-                    .simClickable {
-                        roomNumber++
-                    },
+            Spacer(modifier = Modifier.height(24.dp))
+
+            Body1(text = "집의 크기는 어떻게 되나요?")
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            CulmixTextField(
+                value = houseSize,
+                onValueChange = {
+                    houseSize = it
+                },
+                hint = "평수"
             )
-
-            Spacer(modifier = Modifier.width(24.dp))
+        },
+        bottomContent = {
+            CulmixLargeButton(
+                text = "NEXT",
+                onClick = {
+                    onNext()
+                },
+            )
         }
-
-        Spacer(modifier = Modifier.height(24.dp))
-
-        JoinDivider()
-
-        Spacer(modifier = Modifier.height(24.dp))
-
-        Body1(text = "집의 크기는 어떻게 되나요?")
-
-        Spacer(modifier = Modifier.height(16.dp))
-
-        CulmixTextField(
-            value = houseSize,
-            onValueChange = {
-                houseSize = it
-            },
-            hint = "평수"
-        )
-    }
+    )
 }
 
 @Preview

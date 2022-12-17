@@ -16,10 +16,12 @@ internal fun JoinDivider() {
         color = Gray300,
         thickness = 8.dp,
         modifier = Modifier
-            .layout(){ measurable, constraints ->
-                val placeable = measurable.measure(constraints.copy(
-                    maxWidth = constraints.maxWidth + 32.dp.roundToPx(), //add the end padding 16.dp
-                ))
+            .layout { measurable, constraints ->
+                val placeable = measurable.measure(
+                    constraints.copy(
+                        maxWidth = constraints.maxWidth + 60.dp.roundToPx(), //add the end padding 16.dp
+                    )
+                )
 
                 layout(placeable.width, placeable.height) {
                     placeable.place(0, 0)
