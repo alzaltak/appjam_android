@@ -15,7 +15,6 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
 import com.aljaldak.culmix.R
-import com.aljaldak.culmix.core.Red
 
 val notoSansFamily = FontFamily(
     Font(R.font.noto_sans_kr_black, FontWeight.Black),
@@ -26,18 +25,48 @@ val notoSansFamily = FontFamily(
     Font(R.font.noto_sans_kr_thin, FontWeight.Thin)
 )
 
-object JunctionTypography {
+object CulmixTypography {
 
-    val body1 = TextStyle(
+    val title1 = TextStyle(
         fontFamily = notoSansFamily,
         fontWeight = FontWeight.Bold,
         fontSize = 18.sp,
     )
 
-    val body2 = TextStyle(
+    val title2 = TextStyle(
+        fontFamily = notoSansFamily,
+        fontWeight = FontWeight.Medium,
+        fontSize = 18.sp,
+    )
+
+    val title3 = TextStyle(
+        fontFamily = notoSansFamily,
+        fontWeight = FontWeight.Bold,
+        fontSize = 16.sp,
+    )
+
+    val title4 = TextStyle(
         fontFamily = notoSansFamily,
         fontWeight = FontWeight.Medium,
         fontSize = 16.sp,
+    )
+
+    val title5 = TextStyle(
+        fontFamily = notoSansFamily,
+        fontWeight = FontWeight.Normal,
+        fontSize = 16.sp,
+    )
+
+    val body1 = TextStyle(
+        fontFamily = notoSansFamily,
+        fontWeight = FontWeight.Bold,
+        fontSize = 14.sp,
+    )
+
+    val body2 = TextStyle(
+        fontFamily = notoSansFamily,
+        fontWeight = FontWeight.Medium,
+        fontSize = 14.sp,
     )
 
     val body3 = TextStyle(
@@ -48,8 +77,178 @@ object JunctionTypography {
 
     val body4 = TextStyle(
         fontFamily = notoSansFamily,
+        fontWeight = FontWeight.Bold,
+        fontSize = 12.sp,
+    )
+
+    val body5 = TextStyle(
+        fontFamily = notoSansFamily,
+        fontWeight = FontWeight.Medium,
+        fontSize = 12.sp,
+    )
+
+    val body6 = TextStyle(
+        fontFamily = notoSansFamily,
         fontWeight = FontWeight.Normal,
         fontSize = 12.sp,
+    )
+
+    val body7 = TextStyle(
+        fontFamily = notoSansFamily,
+        fontWeight = FontWeight.Bold,
+        fontSize = 10.sp,
+    )
+
+    val body8 = TextStyle(
+        fontFamily = notoSansFamily,
+        fontWeight = FontWeight.Medium,
+        fontSize = 10.sp,
+    )
+
+    val body9 = TextStyle(
+        fontFamily = notoSansFamily,
+        fontWeight = FontWeight.Normal,
+        fontSize = 10.sp,
+    )
+}
+
+@Composable
+fun Title1(
+    text: String,
+    modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
+    textDecoration: TextDecoration? = null,
+    textAlign: TextAlign? = null,
+    lineHeight: TextUnit = TextUnit.Unspecified,
+    overflow: TextOverflow = TextOverflow.Clip,
+    softWrap: Boolean = true,
+    maxLines: Int = Int.MAX_VALUE,
+    onTextLayout: (TextLayoutResult) -> Unit = {},
+) {
+    Text(
+        text = text,
+        modifier = modifier,
+        color = color,
+        style = CulmixTypography.title1,
+        textDecoration = textDecoration,
+        textAlign = textAlign,
+        lineHeight = lineHeight,
+        overflow = overflow,
+        softWrap = softWrap,
+        maxLines = maxLines,
+        onTextLayout = onTextLayout,
+    )
+}
+
+@Composable
+fun Title2(
+    text: String,
+    modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
+    textDecoration: TextDecoration? = null,
+    textAlign: TextAlign? = null,
+    lineHeight: TextUnit = TextUnit.Unspecified,
+    overflow: TextOverflow = TextOverflow.Clip,
+    softWrap: Boolean = true,
+    maxLines: Int = Int.MAX_VALUE,
+    onTextLayout: (TextLayoutResult) -> Unit = {},
+) {
+    Text(
+        text = text,
+        modifier = modifier,
+        color = color,
+        style = CulmixTypography.title2,
+        textDecoration = textDecoration,
+        textAlign = textAlign,
+        lineHeight = lineHeight,
+        overflow = overflow,
+        softWrap = softWrap,
+        maxLines = maxLines,
+        onTextLayout = onTextLayout,
+    )
+}
+
+@Composable
+fun Title3(
+    text: String,
+    modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
+    textDecoration: TextDecoration? = null,
+    textAlign: TextAlign? = null,
+    lineHeight: TextUnit = TextUnit.Unspecified,
+    overflow: TextOverflow = TextOverflow.Clip,
+    softWrap: Boolean = true,
+    maxLines: Int = Int.MAX_VALUE,
+    onTextLayout: (TextLayoutResult) -> Unit = {},
+) {
+    Text(
+        text = text,
+        modifier = modifier,
+        color = color,
+        style = CulmixTypography.title3,
+        textDecoration = textDecoration,
+        textAlign = textAlign,
+        lineHeight = lineHeight,
+        overflow = overflow,
+        softWrap = softWrap,
+        maxLines = maxLines,
+        onTextLayout = onTextLayout,
+    )
+}
+
+@Composable
+fun Title4(
+    text: String,
+    modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
+    textDecoration: TextDecoration? = null,
+    textAlign: TextAlign? = null,
+    lineHeight: TextUnit = TextUnit.Unspecified,
+    overflow: TextOverflow = TextOverflow.Clip,
+    softWrap: Boolean = true,
+    maxLines: Int = Int.MAX_VALUE,
+    onTextLayout: (TextLayoutResult) -> Unit = {},
+) {
+    Text(
+        text = text,
+        modifier = modifier,
+        color = color,
+        style = CulmixTypography.title4,
+        textDecoration = textDecoration,
+        textAlign = textAlign,
+        lineHeight = lineHeight,
+        overflow = overflow,
+        softWrap = softWrap,
+        maxLines = maxLines,
+        onTextLayout = onTextLayout,
+    )
+}
+
+@Composable
+fun Title5(
+    text: String,
+    modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
+    textDecoration: TextDecoration? = null,
+    textAlign: TextAlign? = null,
+    lineHeight: TextUnit = TextUnit.Unspecified,
+    overflow: TextOverflow = TextOverflow.Clip,
+    softWrap: Boolean = true,
+    maxLines: Int = Int.MAX_VALUE,
+    onTextLayout: (TextLayoutResult) -> Unit = {},
+) {
+    Text(
+        text = text,
+        modifier = modifier,
+        color = color,
+        style = CulmixTypography.title5,
+        textDecoration = textDecoration,
+        textAlign = textAlign,
+        lineHeight = lineHeight,
+        overflow = overflow,
+        softWrap = softWrap,
+        maxLines = maxLines,
+        onTextLayout = onTextLayout,
     )
 }
 
@@ -70,7 +269,7 @@ fun Body1(
         text = text,
         modifier = modifier,
         color = color,
-        style = JunctionTypography.body1,
+        style = CulmixTypography.body1,
         textDecoration = textDecoration,
         textAlign = textAlign,
         lineHeight = lineHeight,
@@ -98,7 +297,7 @@ fun Body2(
         text = text,
         modifier = modifier,
         color = color,
-        style = JunctionTypography.body2,
+        style = CulmixTypography.body2,
         textDecoration = textDecoration,
         textAlign = textAlign,
         lineHeight = lineHeight,
@@ -126,7 +325,7 @@ fun Body3(
         text = text,
         modifier = modifier,
         color = color,
-        style = JunctionTypography.body3,
+        style = CulmixTypography.body3,
         textDecoration = textDecoration,
         textAlign = textAlign,
         lineHeight = lineHeight,
@@ -154,7 +353,7 @@ fun Body4(
         text = text,
         modifier = modifier,
         color = color,
-        style = JunctionTypography.body4,
+        style = CulmixTypography.body4,
         textDecoration = textDecoration,
         textAlign = textAlign,
         lineHeight = lineHeight,
@@ -165,11 +364,12 @@ fun Body4(
     )
 }
 
+
 @Composable
-fun Error(
+fun Body5(
     text: String,
     modifier: Modifier = Modifier,
-    color: Color = Red,
+    color: Color = Color.Unspecified,
     textDecoration: TextDecoration? = null,
     textAlign: TextAlign? = null,
     lineHeight: TextUnit = TextUnit.Unspecified,
@@ -182,7 +382,119 @@ fun Error(
         text = text,
         modifier = modifier,
         color = color,
-        style = JunctionTypography.body3,
+        style = CulmixTypography.body5,
+        textDecoration = textDecoration,
+        textAlign = textAlign,
+        lineHeight = lineHeight,
+        overflow = overflow,
+        softWrap = softWrap,
+        maxLines = maxLines,
+        onTextLayout = onTextLayout,
+    )
+}
+
+@Composable
+fun Body6(
+    text: String,
+    modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
+    textDecoration: TextDecoration? = null,
+    textAlign: TextAlign? = null,
+    lineHeight: TextUnit = TextUnit.Unspecified,
+    overflow: TextOverflow = TextOverflow.Clip,
+    softWrap: Boolean = true,
+    maxLines: Int = Int.MAX_VALUE,
+    onTextLayout: (TextLayoutResult) -> Unit = {},
+) {
+    Text(
+        text = text,
+        modifier = modifier,
+        color = color,
+        style = CulmixTypography.body6,
+        textDecoration = textDecoration,
+        textAlign = textAlign,
+        lineHeight = lineHeight,
+        overflow = overflow,
+        softWrap = softWrap,
+        maxLines = maxLines,
+        onTextLayout = onTextLayout,
+    )
+}
+
+@Composable
+fun Body7(
+    text: String,
+    modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
+    textDecoration: TextDecoration? = null,
+    textAlign: TextAlign? = null,
+    lineHeight: TextUnit = TextUnit.Unspecified,
+    overflow: TextOverflow = TextOverflow.Clip,
+    softWrap: Boolean = true,
+    maxLines: Int = Int.MAX_VALUE,
+    onTextLayout: (TextLayoutResult) -> Unit = {},
+) {
+    Text(
+        text = text,
+        modifier = modifier,
+        color = color,
+        style = CulmixTypography.body7,
+        textDecoration = textDecoration,
+        textAlign = textAlign,
+        lineHeight = lineHeight,
+        overflow = overflow,
+        softWrap = softWrap,
+        maxLines = maxLines,
+        onTextLayout = onTextLayout,
+    )
+}
+
+@Composable
+fun Body8(
+    text: String,
+    modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
+    textDecoration: TextDecoration? = null,
+    textAlign: TextAlign? = null,
+    lineHeight: TextUnit = TextUnit.Unspecified,
+    overflow: TextOverflow = TextOverflow.Clip,
+    softWrap: Boolean = true,
+    maxLines: Int = Int.MAX_VALUE,
+    onTextLayout: (TextLayoutResult) -> Unit = {},
+) {
+    Text(
+        text = text,
+        modifier = modifier,
+        color = color,
+        style = CulmixTypography.body8,
+        textDecoration = textDecoration,
+        textAlign = textAlign,
+        lineHeight = lineHeight,
+        overflow = overflow,
+        softWrap = softWrap,
+        maxLines = maxLines,
+        onTextLayout = onTextLayout,
+    )
+}
+
+@Composable
+fun Body9(
+    text: String,
+    modifier: Modifier = Modifier,
+    color: Color = Color.Unspecified,
+    textDecoration: TextDecoration? = null,
+    textAlign: TextAlign? = null,
+    lineHeight: TextUnit = TextUnit.Unspecified,
+    overflow: TextOverflow = TextOverflow.Clip,
+    softWrap: Boolean = true,
+    maxLines: Int = Int.MAX_VALUE,
+    onTextLayout: (TextLayoutResult) -> Unit = {},
+) {
+    Text(
+        text = text,
+        modifier = modifier,
+        color = color,
+        style = CulmixTypography.body9,
         textDecoration = textDecoration,
         textAlign = textAlign,
         lineHeight = lineHeight,
