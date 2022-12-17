@@ -4,6 +4,7 @@ plugins {
     id(BuildPlugins.KOTLIN_ANDROID)
     id(BuildPlugins.KOTLIN_KAPT)
     id(BuildPlugins.KT_LINT) version Versions.KT_LINT
+    id("org.jetbrains.kotlin.android")
 }
 
 android {
@@ -54,6 +55,9 @@ dependencies {
     implementation(Dependency.Logger.TIMBER)
 
     implementation(Dependency.Hilt.HILT_ANDROID)
+    implementation("androidx.appcompat:appcompat:1.5.1")
+    implementation("com.google.android.material:material:1.4.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     kapt(Dependency.Hilt.HILT_ANDROID_COMPILER)
 
     implementation(Dependency.Kotlin.COROUTINES_CORE)
