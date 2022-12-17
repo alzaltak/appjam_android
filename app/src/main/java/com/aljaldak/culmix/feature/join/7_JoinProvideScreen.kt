@@ -1,24 +1,21 @@
 package com.aljaldak.culmix.feature.join
 
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.toMutableStateList
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.aljaldak.culmix.core.component.BackBar
 import com.aljaldak.culmix.core.component.CulmixLargeButton
-import com.aljaldak.culmix.core.theme.Body1
-import com.aljaldak.culmix.feature.join.common.HouseTypeContent
-import com.aljaldak.culmix.feature.join.common.JoinDivider
+import com.aljaldak.culmix.core.theme.Body5
 import com.aljaldak.culmix.feature.join.common.JoinSimpleLayout
-import com.aljaldak.culmix.feature.join.common.UpDownContent
-import retrofit2.http.Body
+import team.duckie.quackquack.ui.component.QuackLazyVerticalGridTag
+import team.duckie.quackquack.ui.component.QuackTagType
 
 @Composable
-fun JoinPhotoScreen(
+fun JoinProvideScreen(
     onPrevious: () -> Unit,
     onNext: () -> Unit,
 ) {
@@ -31,19 +28,11 @@ fun JoinPhotoScreen(
         content = {
             Spacer(modifier = Modifier.height(30.dp))
 
-            Body1(text = "얼마나 지낼 수 있나요?")
+            Body5(text = "어떤 것을 제공해주나요?")
 
-            Spacer(modifier = Modifier.height(24.dp))
-
-            Column(
-                modifier = Modifier.padding(
-                    horizontal = 25.dp,
-                )
-            ) {
-                Body1(text = "부터")
+            Spacer(modifier = Modifier.height(30.dp))
 
 
-            }
         },
         bottomContent = {
             CulmixLargeButton(
