@@ -13,11 +13,20 @@
         android:theme="@style/Theme.Culmix"
         tools:targetApi="31">
         <activity
+            android:name=".Register2Activity"
+            android:exported="false"
+            android:label="@string/title_activity_register2"
+            android:theme="@style/Theme.Culmix">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".feature.start.activity.StartActivity"
             android:exported="false" />
         <activity
-            android:name=".feature.register.Register1Activity"
-            android:exported="true" >
+            android:name=".feature.register.RegisterActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,7 +36,6 @@
         <activity
             android:name=".root.MainActivity"
             android:exported="false">
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

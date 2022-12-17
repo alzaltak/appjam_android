@@ -1,4 +1,5 @@
 buildscript {
+    val compose_ui_version by extra("1.1.1")
     repositories {
         google()
         mavenCentral()
@@ -8,6 +9,7 @@ buildscript {
         classpath(Dependency.GradlePlugin.GRADLE_ANDROID)
         classpath(Dependency.GradlePlugin.GRADLE_KOTLIN)
         classpath(Dependency.GradlePlugin.GRADLE_HILT)
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10")
     }
 }
 
