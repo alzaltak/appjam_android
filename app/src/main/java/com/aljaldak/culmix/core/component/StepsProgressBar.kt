@@ -14,8 +14,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.aljaldak.culmix.core.Blue
-import com.aljaldak.culmix.core.Gray300
+import com.aljaldak.culmix.core.theme.Blue
+import com.aljaldak.culmix.core.theme.Gray300
 import kotlinx.coroutines.delay
 
 @Composable
@@ -63,7 +63,7 @@ fun Step(modifier: Modifier = Modifier, isCompete: Boolean, isCurrent: Boolean, 
                 }
             }
 
-            //Line
+            // Line
             if (isCurrent) {
                 LinearProgressIndicator(
                     progress = animatedProgress,
@@ -83,7 +83,7 @@ fun Step(modifier: Modifier = Modifier, isCompete: Boolean, isCurrent: Boolean, 
                 )
             }
 
-            //Circle
+            // Circle
             Box(
                 modifier = Modifier
                     .size(viewSize)

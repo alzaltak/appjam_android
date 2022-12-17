@@ -37,6 +37,5 @@ fun BackBar(
 @Composable
 fun Preview_BackBar() {
     BackBar {
-
     }
 }
