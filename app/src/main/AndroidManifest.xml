@@ -48,6 +48,7 @@
             android:exported="true">
 
         </activity>
+        <activity android:name=".feature.sethome.activity.SetHomeActivity" />
         <activity
             android:name=".root.MainActivity"
             android:exported="true" />

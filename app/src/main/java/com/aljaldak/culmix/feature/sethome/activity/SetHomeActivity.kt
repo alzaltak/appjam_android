@@ -1,11 +1,13 @@
 package com.aljaldak.culmix.feature.sethome.activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.MutableLiveData
 import com.aljaldak.culmix.R
 import com.aljaldak.culmix.databinding.ActivitySetHomeBinding
+import com.aljaldak.culmix.root.MainActivity
 
 class SetHomeActivity : AppCompatActivity() {
 
@@ -76,10 +78,20 @@ class SetHomeActivity : AppCompatActivity() {
                         )
                     }
                     4 -> {
+                        goToMainActivity()
                         finish()
                     }
                 }
             }
         }
+    }
+
+    private fun goToMainActivity() {
+        startActivity(
+            Intent(
+                this,
+                MainActivity::class.java,
+            )
+        )
     }
 }

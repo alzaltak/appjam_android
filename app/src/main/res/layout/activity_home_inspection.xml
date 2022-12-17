@@ -27,6 +27,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="1344dp"
+                    android:scaleType="fitXY"
                     android:src="@drawable/img_home_inspection" />
             </LinearLayout>
         </ScrollView>

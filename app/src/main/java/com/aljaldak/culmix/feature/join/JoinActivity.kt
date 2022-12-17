@@ -7,6 +7,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.imePadding
 import androidx.compose.ui.Modifier
 import com.aljaldak.culmix.core.theme.CulmixTheme
+import com.aljaldak.culmix.feature.sethome.activity.SetHomeActivity
 import com.aljaldak.culmix.root.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -26,7 +27,7 @@ class JoinActivity : ComponentActivity() {
                         startActivity(
                             Intent(
                                 this,
-                                MainActivity::class.java,
+                                SetHomeActivity::class.java,
                             )
                         )
                         finish()
