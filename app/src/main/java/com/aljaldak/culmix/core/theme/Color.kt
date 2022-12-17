@@ -2,7 +2,8 @@ package com.aljaldak.culmix.core.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Orange = Color(0xFFFFB500)
+val Main = Color(0xFF34348B)
+val Sub = Color(0xFF9090B8)
 val Red = Color(0xFFEB4D3D)
 val Blue = Color(0xFF0048FF)
 val Black = Color(0xFF000000)

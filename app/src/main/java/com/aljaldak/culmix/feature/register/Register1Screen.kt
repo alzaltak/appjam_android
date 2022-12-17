@@ -18,6 +18,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.aljaldak.culmix.core.component.BackBar
 import com.aljaldak.culmix.core.component.StepsProgressBar
+import com.aljaldak.culmix.core.theme.Main
 import com.aljaldak.culmix.core.theme.notoSansFamily
 
 @Preview
@@ -55,8 +56,9 @@ fun RegisterScreen() {
                 .width(80.dp),
             value = firstName.value,
             onValueChange = { firstName.value = it },
-            colors = TextFieldDefaults.textFieldColors(
-                backgroundColor = Color(0xFFFFFFFF)
+            colors = TextFieldDefaults.outlinedTextFieldColors(
+                backgroundColor = Color(0xFFFFFFFF),
+                focusedBorderColor = Main
             ),
             placeholder = {
                 Text(text = "성")
@@ -68,8 +70,9 @@ fun RegisterScreen() {
                 .width(188.dp),
             value = lastName.value,
             onValueChange = { lastName.value = it },
-            colors = TextFieldDefaults.textFieldColors(
-                backgroundColor = Color(0xFFFFFFFF)
+            colors = TextFieldDefaults.outlinedTextFieldColors(
+                backgroundColor = Color(0xFFFFFFFF),
+                focusedBorderColor = Main
             ),
             placeholder = {
                 Text(text = "이름")
@@ -82,8 +85,9 @@ fun RegisterScreen() {
                 .width(188.dp),
             value = email.value,
             onValueChange = { email.value = it },
-            colors = TextFieldDefaults.textFieldColors(
-                backgroundColor = Color(0xFFFFFFFF)
+            colors = TextFieldDefaults.outlinedTextFieldColors(
+                backgroundColor = Color(0xFFFFFFFF),
+                focusedBorderColor = Main
             ),
             placeholder = {
                 Text(text = "이메일")

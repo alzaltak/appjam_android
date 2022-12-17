@@ -28,11 +28,11 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.aljaldak.culmix.R
+import com.aljaldak.culmix.core.theme.Body3
 import com.aljaldak.culmix.core.theme.Gray400
 import com.aljaldak.culmix.core.theme.Gray500
 import com.aljaldak.culmix.core.theme.Gray600
 import com.aljaldak.culmix.core.theme.Red
-import com.aljaldak.culmix.core.theme.Body3
 import com.aljaldak.culmix.core.theme.notoSansFamily
 
 @Composable
