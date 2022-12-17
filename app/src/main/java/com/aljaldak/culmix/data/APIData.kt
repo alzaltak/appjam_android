@@ -32,7 +32,7 @@ interface ServerAPI {
     @GET("/home")
     suspend fun getHomes(
         @Header("Authorization") accessToken: String,
-        @Field("add_ress") address: String,
+        @Body add_ress: String,
     ): Response<GetHomesResponse>
 
     @GET("/user")
