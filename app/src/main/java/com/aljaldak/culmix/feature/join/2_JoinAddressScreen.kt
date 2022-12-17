@@ -25,8 +25,5 @@ fun JoinAddressScreen(
         }
 
         Spacer(modifier = Modifier.height(30.dp))
-
-
-
     }
 }

@@ -20,6 +20,7 @@ internal fun JoinDivider() {
                 val placeable = measurable.measure(constraints.copy(
                     maxWidth = constraints.maxWidth + 32.dp.roundToPx(), //add the end padding 16.dp
                 ))
+
                 layout(placeable.width, placeable.height) {
                     placeable.place(0, 0)
                 }

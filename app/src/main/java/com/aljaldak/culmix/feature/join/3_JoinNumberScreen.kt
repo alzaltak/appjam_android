@@ -25,8 +25,5 @@ fun JoinNumberScreen(
         }
 
         Spacer(modifier = Modifier.height(30.dp))
-
-
-
     }
 }

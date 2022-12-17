@@ -7,8 +7,7 @@ import com.aljaldak.culmix.core.CulmixTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class JoinActivity: ComponentActivity() {
-
+class JoinActivity : ComponentActivity() {
     override fun onCreate(
         savedInstanceState: Bundle?
     ) {

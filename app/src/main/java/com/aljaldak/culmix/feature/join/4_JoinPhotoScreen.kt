@@ -25,8 +25,5 @@ fun JoinPhotoScreen(
         }
 
         Spacer(modifier = Modifier.height(30.dp))
-
-
-
     }
 }
