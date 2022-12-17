@@ -40,7 +40,8 @@
         </activity>
         <activity
             android:name=".feature.join.JoinActivity"
-            android:exported="false"/>
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
     </application>
 
 </manifest>
