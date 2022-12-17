@@ -15,6 +15,7 @@
             android:id="@+id/img_mypage_information"
             android:layout_width="0dp"
             android:layout_height="300dp"
+            android:scaleType="fitXY"
             android:src="@drawable/img_mypage_information"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
