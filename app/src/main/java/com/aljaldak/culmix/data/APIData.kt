@@ -3,8 +3,7 @@ package com.aljaldak.culmix.data
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.Body
-import retrofit2.http.POST
+import retrofit2.http.*
 
 val serverAPIProvider: ServerAPI = RetrofitClient.build().create(ServerAPI::class.java)
 
@@ -15,25 +14,49 @@ interface ServerAPI {
         @Body registerRequest: RegisterRequest,
     ): Response<Void>
 
-    @POST("/login/token")
+    @POST("/user/token")
     suspend fun login(
-        @Body loginRequest: LoginRequsest,
+        @Body loginRequest: LoginRequest,
+    ): Response<Void>
+
+    @POST("/home")
+    suspend fun postHome(
+        @Body postHomeRequest: PostHomeRequest,
+    ): Response<Void>
+
+    @POST("/user/1")
+    suspend fun like(
+        @Header("Authorization") accessToken: String,
+    ): Response<Void>
+
+    @GET("/home")
+    suspend fun getHomes(
+        @Header("Authorization") accessToken: String,
+        @Field("add_ress") address: String,
+    ): Response<GetHomesResponse>
+
+    @GET("/user")
+    suspend fun getPartners(
+        @Header("Authorization") accessToken: String,
+    ): Response<GetPartnersResponse>
+
+    @GET("/user/my")
+    suspend fun getMyPageInformation(
+        @Header("Authorization") accessToken: String,
+    ): Response<GetMyPageInformationResponse>
+
+    @PUT("/user/{id}")
+    suspend fun postReview(
+        @Header("Authorization") accessToken: String,
+        @Field("id") id: Int,
+    ): Response<PostReviewResponse>
+
+    @DELETE("/user/{id}")
+    suspend fun cancelLike(
+        @Header("Authorization") accessToken: String,
+        @Field("id") id: Int,
     ): Response<Void>
 }
-
-data class RegisterRequest(
-    val account_id: String,
-    val password: String,
-    val last_name: String,
-    val first_name: String,
-    val my_lang: String,
-    val email: String,
-)
-
-data class LoginRequsest(
-    val account_id: String,
-    val password: String,
-)
 
 object RetrofitClient {
 

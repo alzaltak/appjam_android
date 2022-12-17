@@ -7,7 +7,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.aljaldak.culmix.R
-import com.aljaldak.culmix.data.LoginRequsest
+import com.aljaldak.culmix.data.LoginRequest
 import com.aljaldak.culmix.databinding.ActivityLoginBinding
 import com.aljaldak.culmix.root.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
@@ -29,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
         binding.btnLoginLogin.setOnClickListener {
             if (binding.etLoginId.text!!.isNotBlank() && binding.etLoginPassword.text!!.isNotBlank()) {
                 viewModel.login(
-                    LoginRequsest(
+                    LoginRequest(
                         binding.etLoginId.text.toString(),
                         binding.etLoginPassword.text.toString(),
                     )
