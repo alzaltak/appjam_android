@@ -1,11 +1,13 @@
 package com.aljaldak.culmix.feature.lookforpartner.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.aljaldak.culmix.databinding.FragmentLookForPartnerBinding
+import com.aljaldak.culmix.feature.homeinspection.activity.HomeInspectionActivity
 
 class LookForPartnerFragment : Fragment() {
 
@@ -20,5 +22,17 @@ class LookForPartnerFragment : Fragment() {
             false,
         )
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.imgLookForPartnerClickable.setOnClickListener {
+            startActivity(
+                Intent(
+                    requireActivity(),
+                    HomeInspectionActivity::class.java,
+                )
+            )
+        }
     }
 }

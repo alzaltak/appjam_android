@@ -162,7 +162,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:background="@null"
-            android:src="@drawable/btn_edit_profile_accept_disabled"
+            android:src="@drawable/btn_edit_profile_accept_enabled"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

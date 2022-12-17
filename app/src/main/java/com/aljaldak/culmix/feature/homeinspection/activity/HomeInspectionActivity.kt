@@ -17,6 +17,8 @@ class HomeInspectionActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding
+        binding.btnHomeInspectionBack.setOnClickListener {
+            finish()
+        }
     }
 }
