@@ -15,7 +15,6 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
 import com.aljaldak.culmix.R
-import com.aljaldak.culmix.core.Red
 
 val notoSansFamily = FontFamily(
     Font(R.font.noto_sans_kr_black, FontWeight.Black),

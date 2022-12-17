@@ -1,4 +1,4 @@
-package com.aljaldak.culmix.core
+package com.aljaldak.culmix.core.theme
 
 import androidx.compose.ui.graphics.Color
 
