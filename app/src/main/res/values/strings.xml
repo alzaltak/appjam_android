@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">culmix</string>
-    <string name="title_activity_register2">Register2Activity</string>
+    <string name="login_go_to_register">아직 계정이 없으신가요? <b>회원가입</b> </string>
 </resources>
