@@ -1,7 +1,7 @@
 package com.aljaldak.culmix.root
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.aljaldak.culmix.R
 
 class MainActivity : AppCompatActivity() {
