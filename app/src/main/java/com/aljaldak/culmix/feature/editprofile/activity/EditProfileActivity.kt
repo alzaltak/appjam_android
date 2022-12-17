@@ -19,6 +19,10 @@ class EditProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        binding.btnEditProfileBack.setOnClickListener {
+            finish()
+        }
+
         binding.btnEditProfileAccept.setOnClickListener {
             Toast.makeText(this, "변경이 완료되었습니다.", Toast.LENGTH_SHORT).show()
             finish()
