@@ -15,6 +15,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.aljaldak.culmix.core.theme.Gray300
+import com.aljaldak.culmix.core.theme.Main
 import com.aljaldak.culmix.core.theme.Red
 import kotlinx.coroutines.delay
 
@@ -37,7 +38,7 @@ fun StepsProgressBar(modifier: Modifier = Modifier, numberOfSteps: Int, currentS
 
 @Composable
 fun Step(modifier: Modifier = Modifier, isCompete: Boolean, isCurrent: Boolean, isFirst: Boolean) {
-    val color = if (isCompete) Red else Gray300
+    val color = if (isCompete) Main else Gray300
     val viewSize = if (isCurrent) 11.dp else 7.dp
 
     if (isFirst) {

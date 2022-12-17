@@ -70,7 +70,7 @@ fun Register2Screen(onClick: () -> Unit) {
                 onClick = {
                     itemSelection[it] = !itemSelection[it]
                 },
-                itemSelections = itemSelection
+                itemSelections = itemSelection,
             )
 
 //            LazyVerticalGrid(columns = GridCells.Fixed(4), content = {
