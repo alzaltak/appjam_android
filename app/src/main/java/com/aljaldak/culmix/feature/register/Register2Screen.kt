@@ -1,12 +1,9 @@
 package com.aljaldak.culmix.feature.register
 
-import android.util.Log
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -18,25 +15,33 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.aljaldak.culmix.core.component.BackBar
 import com.aljaldak.culmix.core.component.CulmixLargeButton
-import com.aljaldak.culmix.core.component.LanguageItem
 import com.aljaldak.culmix.core.component.StepsProgressBar
 import com.aljaldak.culmix.core.theme.notoSansFamily
+import team.duckie.quackquack.ui.component.QuackLazyVerticalGridTag
+import team.duckie.quackquack.ui.component.QuackTagType
 
 @Composable
 fun Register2Screen(onClick: () -> Unit) {
 
-//    val languageList = remember {
-//        mutableListOf(
-//            "English", "한국어", "日本語", "中国人", "La France", "italiano", "brazilian", "Polskie"
-//        ).toMutableStateList()
-//    }
+    val languageList =
+        listOf(
+            "English", "한국어", "日本語", "中国人", "La France", "italiano", "brazilian", "Polskie"
+        )
 
 //    val selectedList = remember {
 //        mutableListOf("한국어")
 //    }
+    val list = List(
+        size = languageList.size,
+        init = { false }
+    )
+
+    val itemSelection =
+        remember {
+            list.toMutableStateList()
+        }
 //
 //    val isSelected: (String) -> Boolean = { selectedList.contains(it) }
-
 
 
     Column(modifier = Modifier.fillMaxSize()) {
@@ -58,7 +63,17 @@ fun Register2Screen(onClick: () -> Unit) {
                 modifier = Modifier.padding(vertical = 40.dp)
             )
 
-            LazyVerticalGrid(columns = GridCells.Fixed(4), content = {
+            QuackLazyVerticalGridTag(
+                items = languageList,
+                itemChunkedSize = 3,
+                tagType = QuackTagType.Round,
+                onClick = {
+                    itemSelection[it] = !itemSelection[it]
+                },
+                itemSelections = itemSelection
+            )
+
+//            LazyVerticalGrid(columns = GridCells.Fixed(4), content = {
 //                items(languageList.size) {
 //                    LanguageItem(
 //                        text = languageList[it],
@@ -71,13 +86,13 @@ fun Register2Screen(onClick: () -> Unit) {
 //                        }
 //                    )
 //                }
-            })
+//            })
         }
 
         Spacer(modifier = Modifier.weight(1f))
 
-//        CulmixLargeButton(
-//            text = "다음", onClick = onClick, enabled = selectedList.isNotEmpty()
-//        )
+        CulmixLargeButton(
+            text = "다음", onClick = onClick, enabled = itemSelection.any { it }
+        )
     }
 }
