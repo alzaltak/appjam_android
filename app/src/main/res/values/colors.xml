@@ -10,6 +10,8 @@
 
     <color name="background_start">#181743</color>
 
+    <color name="button_enabled">#34348B</color>
+
     <color name="gray_900">#343434</color>
     <color name="gray_800">#737373</color>
     <color name="gray_700">#9F9F9F</color>
