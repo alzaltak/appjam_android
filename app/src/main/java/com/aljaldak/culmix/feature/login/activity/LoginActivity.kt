@@ -1,10 +1,12 @@
 package com.aljaldak.culmix.feature.login.activity
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.aljaldak.culmix.R
 import com.aljaldak.culmix.databinding.ActivityLoginBinding
+import com.aljaldak.culmix.root.MainActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -17,6 +19,14 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding
+        binding.btnLoginLogin.setOnClickListener {
+            startActivity(
+                Intent(
+                    this,
+                    MainActivity::class.java,
+                )
+            )
+            finish()
+        }
     }
 }

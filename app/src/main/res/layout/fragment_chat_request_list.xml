@@ -23,15 +23,45 @@
             app:layout_constraintStart_toStartOf="@id/guideline_chat_request_vertical_start"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.recyclerview.widget.RecyclerView
+        <ScrollView
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="30dp"
+            android:scrollbars="none"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/guideline_chat_request_vertical_end"
             app:layout_constraintStart_toStartOf="@id/guideline_chat_request_vertical_start"
-            app:layout_constraintTop_toBottomOf="@id/tv_chat_request_list_title"
-            tools:listitem="@layout/item_chat_request" />
+            app:layout_constraintTop_toBottomOf="@id/tv_chat_request_list_title">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:listitem="@layout/item_chat_request">
+
+                <ImageView
+                    android:id="@+id/img_chat_request_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginBottom="16dp"
+                    android:src="@drawable/item_chat_request" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:src="@drawable/item_chat_request" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:src="@drawable/item_chat_request" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:src="@drawable/item_chat_request" />
+            </LinearLayout>
+        </ScrollView>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_chat_request_vertical_start"

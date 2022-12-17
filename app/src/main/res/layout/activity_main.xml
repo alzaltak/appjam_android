@@ -12,8 +12,18 @@
         android:layout_height="match_parent"
         tools:context=".root.MainActivity">
 
+        <FrameLayout
+            android:id="@+id/container_main"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/bn_main"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bn_main"
             android:layout_width="0dp"
             android:layout_height="56dp"
             android:background="@drawable/bg_bottom_navigation_view_main"
@@ -24,6 +34,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/container_main"
             app:menu="@menu/menu_bottom_navigation_main" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

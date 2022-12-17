@@ -23,6 +23,4 @@ class ChatRequestListFragment : Fragment() {
         )
         return binding.root
     }
-
-
 }
