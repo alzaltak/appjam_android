@@ -79,7 +79,6 @@ fun Register1Screen(onClick: () -> Unit, viewModel: ViewModel) {
             }
             TextField(
                 modifier = Modifier
-                    .padding(vertical = 0.dp)
                     .fillMaxWidth(),
                 value = email.value,
                 onValueChange = { email.value = it },
