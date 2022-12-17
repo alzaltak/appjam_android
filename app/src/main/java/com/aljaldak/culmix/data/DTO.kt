@@ -35,19 +35,38 @@ data class PostHomeRequest(
 )
 
 data class GetPartnersResponse(
-    val hi: String,
+    val partnerHomeInformation: List<PartnerHomeInformation>,
+)
+
+data class PartnerHomeInformation(
+    val partnerName: String,
+    val partnerScore: String,
+    val homeName: String,
+    val location: String,
+    val pictureURL: String,
+    val buildingType: String,
+    val wide: Int,
+    val maxPeople: Int,
 )
 
 data class GetHomesResponse(
-    val hoho: String,
+    val homeInformation: List<HomeInformation>,
+)
+
+data class HomeInformation(
+    val address: String,
+    val userName: String,
+    val country: String,
 )
 
 data class GetMyPageInformationResponse(
-    val android: String,
+    val userName: String,
+    val score: String,
+    val introduction: String,
 )
 
 data class PostReviewResponse(
-    val stars: String,
+    val contents: String,
 )
 
 fun main() {
